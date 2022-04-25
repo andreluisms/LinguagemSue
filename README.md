@@ -1,7 +1,7 @@
 # Linguagem SUE (Somente Um Exemplo)
-SUE foi uma linguagem apresentada na disciplina __SINF0012 - Linguagens Formais e Tradutores__, __oferta 2021.2__.
+SUE foi uma linguagem apresentada na disciplina __SINF0012 - Linguagens Formais e Tradutores__.
 
-Nesse documento serão apresentadas as atividades a serem desenvolvidas pelos discentes no projeto da disciplina. A seguir, apresentamos cada uma delas, usando como exemplo
+Nesse documento são apresentadas as atividades a serem desenvolvidas pelos discentes no projeto da disciplina. A seguir, apresentamos cada uma delas, usando como exemplo
 a linguagem SUE.
 
 - [x] Atividade 1. Elaboração da Documentação Léxica.
@@ -46,7 +46,7 @@ a linguagem SUE.
 
 ### Grupo 02 - SubLua:
 [Ter-11-11:45]
-  - Carlos Eduardo Pereira Silva 
+  - Clovijan Bispo Rocha
   - Julia de Souza Lima
   - Valdir Mendonca Santana
 
