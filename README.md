@@ -9,7 +9,7 @@ Atividade 1. Elaboração da Documentação Léxica.
   
 Atividade 2. Elaboração do Léxico em PLY.
 	
-      [LexicoPLY](https://github.com/andreluisms/TutorialSemantico02/blob/main/ExpressionLanguageLex.py)
+      [LexicoPLY](https://github.com/andreluisms/TutorialSemantico02/blob/main)
 
 Atividade 3. Elaboração da Documentação Sintática e Exemplos de Código.
 
