@@ -37,7 +37,7 @@ a linguagem SUE.
   - Exemplo de Gerador de Assembly MIPS
 
 
-# Projetos Associados dos Discentes 
+# Projetos dos Discentes 
 ### Grupo 01 - SubJava:
 [Qui-07:45-08:30]
   - Carlos Eduardo Pereira Silva 
