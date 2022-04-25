@@ -1,36 +1,36 @@
-# Linguagem sal
+# Linguagem SUE (Somente Um Exemplo)
 Exemplo de Projeto proposto para a disciplina __SINF0012 - Linguagens Formais e Tradutores__, __oferta 2021.2__.
 
 Nesse documento serão apresentadas as atividades a serem desenvolvidas no projeto da disciplina. A seguir, apresentamos cada uma delas:
 
 - [x] Atividade 1. Elaboração da Documentação Léxica.
 
-- Documentação
+  - Documentação
   
 - [x] Atividade 2. Elaboração do Léxico em PLY.
 	
-- [LexicoPLY](https://github.com/andreluisms/TutorialSemantico02/blob/main/ExpressionLanguageLex.py)
+  - [LexicoPLY](https://github.com/andreluisms/TutorialSemantico02/blob/main/ExpressionLanguageLex.py)
 
-- [ ] Atividade 3. Elaboração da Documentação Sintática e Exemplos de Código.
+- [x] Atividade 3. Elaboração da Documentação Sintática e Exemplos de Código.
 
-- Documentação
+  - Documentação
 
-- [ ] Atividade 4. Elaboração da Gramática Livre de Contexto e implementação no PLY
+- [x] Atividade 4. Elaboração da Gramática Livre de Contexto e implementação no PLY
 
-- [GLC]()
+  - [GLC]()
 
-- Implementação no PLY
+  - [Implementação no PLY](https://github.com/andreluisms/TutorialSemantico02/blob/main/ExpressionLanguageParser.py)
 
-- [ ] Atividade 5. Elaboração da Sintaxe Abstrata e Visitor Pretty Printer
+- [x] Atividade 5. Elaboração da Sintaxe Abstrata e Visitor Pretty Printer
 
-- [Exemplo Sintaxe Abstrata](https://github.com/andreluisms/TutorialSemantico02/blob/main/SintaxeAbstrata.py)
+  - [Exemplo Sintaxe Abstrata](https://github.com/andreluisms/TutorialSemantico02/blob/main/SintaxeAbstrata.py)
 
-- [Exemplo Visitor ImprimeCodigo](https://github.com/andreluisms/TutorialSemantico02/blob/main/Visitor.py)
+  - [Exemplo Visitor ImprimeCodigo](https://github.com/andreluisms/TutorialSemantico02/blob/main/Visitor.py)
 
-- [ ] Atividade 6. Análise Semântica
+- [x] Atividade 6. Análise Semântica
 
-- [Exemplo Análise Semântica](https://github.com/andreluisms/TutorialSemantico02/blob/main/SemanticVisitor.py)
+  - [Exemplo Análise Semântica](https://github.com/andreluisms/TutorialSemantico02/blob/main/SemanticVisitor.py)
 
-- [ ] Atividade 7. Geração de Assembly.
+- [x] Atividade 7. Geração de Assembly.
   
-- Exemplo de Gerador de Assembly MIPS
+  - Exemplo de Gerador de Assembly MIPS

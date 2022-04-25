@@ -1,0 +1,36 @@
+Rascunho da gramatica
+program → funcdecl | 
+          funcdecl program
+
+funcdecl → signature body
+
+signature → ID ID ""("" sigParams ")"
+
+sigparams → ID ID | 
+            ID ID "," sigparams
+
+body → "{" stms "}"
+
+stms → stm  | 
+       stm  stms
+
+stm → exp ";"  | 
+      WHILE "(" exp ")" body | return exp ";"
+
+call → ID "(" params ")"
+
+exp → exp "+" exp | 
+      exp "*" exp | 
+      exp "^" exp | 
+      call | 
+      assign | 
+      NUM | 
+      ID
+
+call → ID "("params")" | 
+       ID "(" ")"
+
+params → exp"," params | 
+         exp
+
+assign → ID "=" exp
