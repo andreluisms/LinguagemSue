@@ -45,13 +45,13 @@ a linguagem SUE.
   - Samuel Silva dos Anjos
 
 ### Grupo 02 - SubLua:
-[Ter-11-11:45]
+[Ter-10:45-11:30]
   - Clovijan Bispo Rocha
   - Julia de Souza Lima
   - Valdir Mendonca Santana
 
 ### Grupo 03 - SubC#:
-[Ter-11:45-12:30]
+[Ter-11:30-12:15]
   - Matheus da Cruz Souza 
   - Moises Junio Fagundes dos Santos
   - Reinan de Jesus Santos
@@ -73,12 +73,12 @@ a linguagem SUE.
   - Thiago Santos Santana
 
 ### Grupo 07 - SubTypescript:
-[Sex-20:00-20:45]
+[Qui-08:30-09:15]
   - Gabriel Santana Cruz
   - Jeovane da Mota Santos Ferreira
   - Maycon Douglas Oliveira Santos
 
 ### Grupo 08 - SubGo:
-[Qui-08:30-09:15]
+[Ter-12:15-13:00]
   - Adriano Cirino da Silva
   - Kamila Mendonca Lima
