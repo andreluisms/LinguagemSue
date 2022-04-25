@@ -5,31 +5,32 @@ Nesse documento serão apresentadas as atividades a serem desenvolvidas no proje
 
 Atividade 1. Elaboração da Documentação Léxica.
 
-    Documentação
+- Documentação
   
 Atividade 2. Elaboração do Léxico em PLY.
 	
-      [LexicoPLY](https://github.com/andreluisms/TutorialSemantico02/blob/main)
+- [LexicoPLY](https://github.com/andreluisms/TutorialSemantico02/blob/main)
 
 Atividade 3. Elaboração da Documentação Sintática e Exemplos de Código.
 
-    Documentação
+- Documentação
 
 Atividade 4. Elaboração da Gramática Livre de Contexto e implementação no PLY
 
-    GLC
+- GLC
 
-    Implementação no PLY
+- Implementação no PLY
 
 Atividade 5. Elaboração da Sintaxe Abstrata e Visitor Pretty Printer
 
-    Exemplo Sintaxe Abstrata
+- Exemplo Sintaxe Abstrata
 
-    Exemplo PrettyPrinter
+- Exemplo PrettyPrinter
 
 Atividade 6. Análise Semântica
 
-    Exemplo Análise Semântica
+- Exemplo Análise Semântica
 
 Atividade 7. Geração de Assembly.
-    Exemplo de Gerador de Assembly MIPS
+
+- Exemplo de Gerador de Assembly MIPS
