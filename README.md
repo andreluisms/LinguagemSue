@@ -6,7 +6,7 @@ a linguagem SUE.
 
 - [x] Atividade 1. Elaboração da Documentação Léxica.
 
-  - [Documentação Léxica](https://github.com/andreluisms/LinguagemSue/blob/main/Lexico.md)
+  - [Documentação Léxica](https://github.com/andreluisms/LinguagemSue/blob/main/mds/lexico.md)
   
 - [x] Atividade 2. Elaboração do Léxico em PLY.
 	
@@ -14,11 +14,11 @@ a linguagem SUE.
 
 - [x] Atividade 3. Elaboração da Documentação Sintática e Exemplos de Código.
 
-  - Documentação
+  - [Documentação Sintática](https://github.com/andreluisms/LinguagemSue/blob/main/mds/sintatico.md)
 
 - [x] Atividade 4. Elaboração da Gramática Livre de Contexto e implementação no PLY
 
-  - [GLC](https://github.com/andreluisms/TutorialSemantico02/blob/main/glc.md)
+  - [GLC](https://github.com/andreluisms/TutorialSemantico02/blob/main/mds/glc.md)
 
   - [Implementação no PLY](https://github.com/andreluisms/TutorialSemantico02/blob/main/ExpressionLanguageParser.py)
 
