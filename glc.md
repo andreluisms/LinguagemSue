@@ -1,6 +1,6 @@
-#GLC da Linguagem de Programação SUE (Somente um Exemplo)
-# Terminais são representados pelos elementos cuja grafia está em maiúsculo, bem como 
-# pelos símbolos que estão entre aspas duplas (")
+# GLC da Linguagem de Programação SUE (Somente um Exemplo)
+Terminais são representados pelos elementos cuja grafia está em maiúsculo, bem como 
+pelos símbolos que estão entre aspas duplas (")
 
 program → funcdecl | 
           funcdecl program
