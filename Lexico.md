@@ -1,5 +1,7 @@
 # ✨ [Linguagem Sue (Somente um Exemplo)](https://github.com/andreluisms/LinguagemSue)
 
+# Léxico
+
 Sue é uma linguagem de programação baseada em C, usada para apresentar as diferentes etapas necessárias para o processo de compilação. A seguir, destacamos seus elementos léxicos:
 
 #### 1. Palavras reservadas.
