@@ -24,6 +24,8 @@ O comando while inicia com a palavra reservada while, seguido por uma expressão
 Quanto ao comando return ele inicia com a palavra reservada return, seguido por uma expressão. Ao seu final, é usado o delimitador ;.
 
 ## 1.2 Expressões em Sue
+Sue dá suporte a expressões aritmética de soma, multiplicação e exponenciação. Adicionalmente, também dá suporte a chamadas de função (call), atribuição de valores a variáveis (assign). Por fim, expressões também podem ser números (NUM) e variáveis (ID). A sintaxe das expressões Sue é apresentada pela seguinte regra:
+
 ```
 exp → exp "+" exp | 
       exp "*" exp | 
@@ -33,8 +35,6 @@ exp → exp "+" exp |
       NUM | 
       ID
 ```
-
-Sue dá suporte a expressões aritmética de soma, multiplicação e exponenciação. Adicionalmente, também dá suporte a chamadas de função (call), atribuição de valores a variáveis (assign). Por fim, expressões também podem ser números (NUM) e variáveis (ID).
 
 ### 1.2.1 Chamadas de Função e Atribuição
 
