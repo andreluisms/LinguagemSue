@@ -43,11 +43,6 @@ a linguagem SUE.
   - Luan Gustavo Oliveira Santana
   - Tiago Santiago de Menezes
 
-### Grupo 01 - Ruby:
-  - Caio Eduardo Pedral de Morais
-  - Luan Gustavo Oliveira Santana
-  - Tiago Santiago de Menezes
-
 ### Grupo 02 - Go:
 - Thalyta Costa dos Santos
 - Janaina Ferreira Santos
