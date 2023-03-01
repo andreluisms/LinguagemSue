@@ -1,8 +1,7 @@
 # Linguagem SUE (Somente Um Exemplo)
 SUE é uma linguagem adotada na disciplina __SINF0012 - Linguagens Formais e Tradutores__ para entendimento de como implementar as diferentes etapas do projeto de um compilador.
 
-Nesse documento são apresentadas as atividades a serem desenvolvidas pelos discentes no projeto da disciplina. A seguir, apresentamos cada uma delas, usando como exemplo
-a linguagem SUE.
+Nesse documento, são apresentadas as atividades a serem desenvolvidas pelos discentes no projeto da disciplina. A seguir, apresentamos cada uma delas usando como exemplo a linguagem SUE.
 
 - [x] Atividade 1. Elaboração da Documentação Léxica.
 
@@ -37,41 +36,41 @@ a linguagem SUE.
   - Exemplo de Gerador de Assembly MIPS
 
 
-# Projetos dos Discentes 
-### Grupo 01 - Ruby:
+# Links para os Projetos dos Discentes 
+#### Grupo 01 - Ruby:
   - Caio Eduardo Pedral de Morais
   - Luan Gustavo Oliveira Santana
   - Tiago Santiago de Menezes
 
-### Grupo 02 - Go:
+#### Grupo 02 - Go:
 - Thalyta Costa dos Santos
 - Janaina Ferreira Santos
 - Bruna Keila Oliveira Santos
 - Eduardo Santos Santana Bispo 
 
-### Grupo 03 - PHP:
+#### Grupo 03 - PHP:
 - Alesandro da Silva Santos
 - Eliane Dantas de Jesus
 - Natalia da Silva Costa 
 
-### Grupo 04 - Dart:
+#### Grupo 04 - Dart:
   - Kevenny
   - Júlia
   - Verenilson
 
 
-### Grupo 05 - R:
+#### Grupo 05 - R:
   - Jéssica Santos
   - Carlos Eduardo
   - Rafael Rezende Santana Carvalho
 
-### Grupo 06 - Lua:
+#### Grupo 06 - Lua:
   - Clovijan Bispo Rocha
   - Magda Tayne Nunes Amaral
   - Gilmário 
 
 
-### Grupo 07 - Rust:
+#### Grupo 07 - Rust:
   - Eduardo Afonso Sobral Santos Tavares
   - João Victor Prado Vieira Rios
   - Nadianne Maria dos Santos Galvão
@@ -83,13 +82,13 @@ a linguagem SUE.
   - Jorge Matheus
 
 
-### Grupo 09 - JavaScript:
+#### Grupo 09 - JavaScript:
   - Vitor Oliveira Santos
   - Jadson Tavares Santos
   - João Vitor Sodre de Souza
 
 
-### Grupo 10 - typeScript:
+#### Grupo 10 - typeScript:
   - Jordan Silva Santos de Aquino 
   - Nagibe Santos Wanus 
   - Luís Gabriel de costa lima Ribeiro
