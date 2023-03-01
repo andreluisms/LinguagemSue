@@ -1,5 +1,5 @@
 # Linguagem SUE (Somente Um Exemplo)
-SUE foi uma linguagem apresentada na disciplina __SINF0012 - Linguagens Formais e Tradutores__.
+SUE é uma linguagem adotada na disciplina __SINF0012 - Linguagens Formais e Tradutores__ para entendimento de como implementar as diferentes etapas do projeto de um compilador.
 
 Nesse documento são apresentadas as atividades a serem desenvolvidas pelos discentes no projeto da disciplina. A seguir, apresentamos cada uma delas, usando como exemplo
 a linguagem SUE.
