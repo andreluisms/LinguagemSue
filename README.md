@@ -18,7 +18,7 @@ a linguagem SUE.
 
 - [x] Atividade 4. Elaboração da Gramática Livre de Contexto e implementação no PLY
 
-  - [GLC](https://github.com/andreluisms/TutorialSemantico02/blob/main/glc)
+  - [GLC](https://github.com/andreluisms/TutorialSemantico02/blob/main/glc.md)
 
   - [Implementação no PLY](https://github.com/andreluisms/TutorialSemantico02/blob/main/ExpressionLanguageParser.py)
 
