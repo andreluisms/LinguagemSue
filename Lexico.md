@@ -1,4 +1,4 @@
-# ✨ [Linguagem Sue (Somente um Exemplo)] - Elementos Léxicos
+# ✨ Linguagem Sue - Elementos Léxicos
 
 Sue é uma linguagem de programação baseada em C, usada para apresentar as diferentes etapas necessárias para o processo de compilação. A seguir, destacamos seus elementos léxicos:
 
