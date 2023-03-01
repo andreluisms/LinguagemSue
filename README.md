@@ -6,7 +6,7 @@ a linguagem SUE.
 
 - [x] Atividade 1. Elaboração da Documentação Léxica.
 
-  - [Documentação Léxica] (https://github.com/andreluisms/LinguagemSue/blob/main/Lexico.md)
+  - [Documentação Léxica](https://github.com/andreluisms/LinguagemSue/blob/main/Lexico.md)
   
 - [x] Atividade 2. Elaboração do Léxico em PLY.
 	
