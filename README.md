@@ -64,7 +64,7 @@ Nesse documento, são apresentadas as atividades a serem desenvolvidas pelos dis
   - Carlos Eduardo
   - Rafael Rezende Santana Carvalho
 
-#### Grupo 06 - Lua:
+#### [Grupo 06 - Lua](https://github.com/Clovijan/Compilador_Lua):
   - Clovijan Bispo Rocha
   - Magda Tayne Nunes Amaral
   - Gilmário 
