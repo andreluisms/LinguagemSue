@@ -37,58 +37,58 @@ Nesse documento, são apresentadas as atividades a serem desenvolvidas pelos dis
 
 
 # Links para os Projetos dos Discentes 
-#### Grupo 01 - Ruby:
+#### [Grupo 01 - Ruby:](https://github.com/Luan-S4ntana/Compilador_Ruby)
   - Caio Eduardo Pedral de Morais
   - Luan Gustavo Oliveira Santana
-  - Tiago Santiago de Menezes
 
-#### Grupo 02 - Go:
+
+#### [Grupo 02 - Go:](https://github.com/EduardoSSBispo/Linguagem-GO)
 - Thalyta Costa dos Santos
 - Janaina Ferreira Santos
 - Bruna Keila Oliveira Santos
 - Eduardo Santos Santana Bispo 
 
-#### Grupo 03 - PHP:
+#### [Grupo 03 - PHP:](https://github.com/Elianedantas/CompiladorPHP)
 - Alesandro da Silva Santos
 - Eliane Dantas de Jesus
 - Natalia da Silva Costa 
 
-#### Grupo 04 - Dart:
+#### [Grupo 04 - Dart:](https://github.com/KevennyJS/Dart-Analyser-Lexicon-Syntactic-Semantic)
   - Kevenny
   - Júlia
   - Verenilson
 
 
-#### Grupo 05 - R:
+#### [Grupo 05 - R:](https://github.com/JessicaPortilio/LinguagemR)
   - Jéssica Santos
   - Carlos Eduardo
   - Rafael Rezende Santana Carvalho
 
-#### [Grupo 06 - Lua](https://github.com/Clovijan/Compilador_Lua):
+#### [Grupo 06 - Lua:](https://github.com/Clovijan/Compilador_Lua):
   - Clovijan Bispo Rocha
   - Magda Tayne Nunes Amaral
   - Gilmário 
 
 
-#### Grupo 07 - Rust:
+#### [Grupo 07 - Rust:](https://github.com/LINGUAGENS-FORMAIS-E-TRADUTORES-2022-2/compilador-rust)
   - Eduardo Afonso Sobral Santos Tavares
   - João Victor Prado Vieira Rios
   - Nadianne Maria dos Santos Galvão
 
 
-#### Grupo 08 - C#:
+#### [Grupo 08 - C#:](https://github.com/charlescosta1/CSharp_Compiler)
   - Carlos Henrique
   - Charles Dayan
   - Jorge Matheus
 
 
-#### Grupo 09 - JavaScript:
+#### [Grupo 09 - JavaScript:](https://github.com/vitorolive99/Projeto-LFT---JavaScript)
   - Vitor Oliveira Santos
   - Jadson Tavares Santos
   - João Vitor Sodre de Souza
 
 
-#### Grupo 10 - typeScript:
+#### [Grupo 10 - typeScript:](https://github.com/JordS2/Analisador-L-xico---Typescript-1-)
   - Jordan Silva Santos de Aquino 
   - Nagibe Santos Wanus 
   - Luís Gabriel de costa lima Ribeiro
