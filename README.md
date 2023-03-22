@@ -88,7 +88,7 @@ Nesse documento, são apresentadas as atividades a serem desenvolvidas pelos dis
   - João Vitor Sodre de Souza
 
 
-#### [Grupo 10 - typeScript:](https://github.com/JordS2/Analisador-L-xico---Typescript-1-)
+#### [Grupo 10 - TypeScript:](https://github.com/JordS2/Analisador-L-xico---Typescript-1-)
   - Jordan Silva Santos de Aquino 
   - Nagibe Santos Wanus 
   - Luís Gabriel de costa lima Ribeiro
