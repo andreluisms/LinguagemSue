@@ -37,6 +37,9 @@ Nesse documento, são apresentadas as atividades a serem desenvolvidas pelos dis
 
 
 # Links para os Projetos dos Discentes 
+
+## 2022.2 
+
 #### [Grupo 01 - Ruby:](https://github.com/Luan-S4ntana/Compilador_Ruby)
   - Caio Eduardo Pedral de Morais
   - Luan Gustavo Oliveira Santana
