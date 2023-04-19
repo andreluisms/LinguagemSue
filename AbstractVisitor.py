@@ -3,89 +3,67 @@ from abc import abstractmethod, ABCMeta
 class AbstractVisitor(metaclass=ABCMeta):
 
     @abstractmethod
-    def visitFuncDeclConcrete(self, funcDecl):
-        pass
+    def visitFuncDeclConcrete(self, funcDecl): pass
 
     @abstractmethod
-    def visitSignatureConcrete(self, signature):
-        pass
+    def visitSignatureConcrete(self, signature): pass
 
     @abstractmethod
-    def visitSingleSigParams(self, singleSigParams):
-        pass
+    def visitSingleSigParams(self, singleSigParams): pass
 
     @abstractmethod
-    def visitCompoundSigParams(self, compoundSigParams):
-        pass
+    def visitCompoundSigParams(self, compoundSigParams): pass
 
     @abstractmethod
-    def visitBodyConcrete(self, body):
-        pass
+    def visitBodyConcrete(self, body): pass
 
     @abstractmethod
-    def visitSingleStm(self, singlestm):
-        pass
+    def visitSingleStm(self, singlestm): pass
 
     @abstractmethod
-    def visitCompoundStm(self, compoundStm):
-        pass
+    def visitCompoundStm(self, compoundStm): pass
 
     @abstractmethod
-    def visitStmExp(self, stmExp):
-        pass
+    def visitStmExp(self, stmExp): pass
 
     @abstractmethod
-    def visitStmWhile(self, stmWhile):
-        pass
+    def visitStmWhile(self, stmWhile): pass
 
     @abstractmethod
-    def visitStmReturn(self, stmReturn):
-        pass
+    def visitStmReturn(self, stmReturn): pass
 
     @abstractmethod
-    def visitAssignExp(self, assignExp):
-        pass
+    def visitAssignExp(self, assignExp): pass
 
     @abstractmethod
-    def visitSomaExp(self, somaExp):
-        pass
+    def visitSomaExp(self, somaExp): pass
 
     @abstractmethod
-    def visitMulExp(self, mulExp):
-        pass
+    def visitMulExp(self, mulExp): pass
 
     @abstractmethod
-    def visitPotExp(self, potExp):
-        pass
+    def visitPotExp(self, potExp): pass
 
     @abstractmethod
-    def visitCallExp(self, callExp):
-        pass
+    def visitCallExp(self, callExp): pass
 
     @abstractmethod
-    def visitNumExp(self, numExp):
-        pass
+    def visitNumExp(self, numExp): pass
 
     @abstractmethod
-    def visitIdExp(self, idExp):
-        pass
+    def visitIdExp(self, idExp): pass
 
     @abstractmethod
-    def visitBooleanExp(self, booleanExp):
-        pass
+    def visitBooleanExp(self, booleanExp): pass
 
     @abstractmethod
-    def visitParamsCall(self, paramsCall):
-        pass
+    def visitParamsCall(self, paramsCall): pass
 
     @abstractmethod
-    def visitNoParamsCall(self, simpleCall):
-        pass
+    def visitNoParamsCall(self, simpleCall): pass
 
     @abstractmethod
-    def visitCompoundParams(self, compoundParams):
-        pass
+    def visitCompoundParams(self, compoundParams): pass
 
     @abstractmethod
-    def visitSingleParam(self, singleParam):
-        pass
+    def visitSingleParam(self, singleParam): pass
