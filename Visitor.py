@@ -1,4 +1,5 @@
 from AbstractVisitor import AbstractVisitor
+from ExpressionLanguageParser import *
 # global tab
 tab = 0
 
@@ -120,3 +121,18 @@ class Visitor(AbstractVisitor):
     def visitSingleParam(self, singleParam):
         # print("visitSingleParam")
         singleParam.exp.accept(self)
+
+
+def main():
+    f = open("input1.su", "r")
+    lexer = lex.lex()
+    lexer.input(f.read())
+    parser = yacc.yacc()
+    result = parser.parse(debug=False)
+    print("#imprime o programa que foi passado como entrada")
+    visitor = Visitor()
+    for r in result:
+        r.accept(visitor)
+
+if __name__ == "__main__":
+    main()

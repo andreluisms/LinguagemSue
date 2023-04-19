@@ -11,12 +11,9 @@
 # call → id (params) | id ( )
 # params → exp, params | exp
 # assign → id = exp
-
 import ply.yacc as yacc
 from ExpressionLanguageLex import *
 import SintaxeAbstrata as sa
-import Visitor as vis
-import SemanticVisitor as sv
 
 def p_program(p):
     '''program : funcdecl
@@ -146,3 +143,15 @@ def p_params_ids(p):
 
 def p_error(p):
     print("Syntax error in input!")
+
+
+def main():
+    f = open("input1.su", "r")
+    lexer = lex.lex()
+    lexer.input(f.read())
+    parser = yacc.yacc()
+    result = parser.parse(debug=True)
+
+
+if __name__ == "__main__":
+    main()

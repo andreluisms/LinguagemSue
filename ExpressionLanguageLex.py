@@ -42,3 +42,15 @@ def t_error(t):
    print("Illegal character '%s'" % t.value[0])
    t.lexer.skip(1)
 
+
+def main():
+   f = open("input1.su", "r")
+   lexer = lex.lex(debug=1)
+   lexer.input(f.read())
+   print('\n\n# lexer output:')
+   for tok in lexer:
+      print ('type:', tok.type, ', value:',tok.value)
+
+
+if __name__ == "__main__":
+   main()

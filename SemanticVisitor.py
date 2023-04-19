@@ -1,8 +1,5 @@
-from AbstractVisitor import AbstractVisitor
+from Visitor import *
 import SymbolTable as st
-from Visitor import Visitor
-
-import SintaxeAbstrata as sa
 
 def coercion(type1, type2):
     if (type1 in st.Number and type2 in st.Number):
@@ -167,3 +164,19 @@ class SemanticVisitor(AbstractVisitor):
 
     def visitSingleParam(self, singleParam):
         return [singleParam.exp.accept(self)]
+
+
+def main():
+    f = open("input1.su", "r")
+    lexer = lex.lex()
+    lexer.input(f.read())
+    parser = yacc.yacc()
+    result = parser.parse(debug=False)
+    print("#imprime o programa que foi passado como entrada")
+    svisitor = SemanticVisitor()
+    for r in result:
+        r.accept(svisitor)
+
+
+if __name__ == "__main__":
+    main()
