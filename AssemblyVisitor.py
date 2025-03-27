@@ -1,7 +1,5 @@
 from AbstractVisitor import AbstractVisitor
 from ExpressionLanguageParser import *
-from SemanticVisitor import *
-from Visitor import *
 import AssemblyST as st
 
 def getAssemblyType(type = None):
@@ -20,8 +18,6 @@ class AssemblyVisitor(AbstractVisitor):
         self.text.append("    move $fp, $sp")
         self.data = set()  # Campo .data
         self.rotulos = {}  #dicionario que armazena rotulos gerados para alguns comandos e expressoes (while, exppot) 
-
-
 
     def novo_rotulo(self, string):
         if not string in self.rotulos:
@@ -102,7 +98,6 @@ class AssemblyVisitor(AbstractVisitor):
         code.append(f"    sw $v0, {st.getSP()}($fp)")
         compoundParams.params.accept(self)
 
-
     #Metodo de visitacao para chamada de função sem parametros
     def visitNoParamsCall(self, simpleCall):
         code = self.getList() 
@@ -141,7 +136,6 @@ class AssemblyVisitor(AbstractVisitor):
     def visitSingleSigParams(self, singleSigParams):
         return [singleSigParams.id,  getAssemblyType()]
 
-
     #Visitação de corpo de função
     def visitBodyConcrete(self, bodyConcrete):
         if bodyConcrete.stms:
@@ -173,7 +167,6 @@ class AssemblyVisitor(AbstractVisitor):
     def visitStmExp(self, stmExp):
         stmExp.exp.accept(self)  
 
-
     #Visitação das expressões
     def visitAssignExp(self, assignExp):
         code = self.getList() 
@@ -183,11 +176,9 @@ class AssemblyVisitor(AbstractVisitor):
             st.addVar(assignExp.exp1.id, getAssemblyType())
             bind = st.getBindable(assignExp.exp1.id)
         code.append(f"    sw $v0, {bind[st.OFFSET]}($fp)")  # Atribuir variável na pilha
-
     
     def visitLessExp(self, lessExp):
         code = self.getList()
-
         # Avalia a primeira expressão e armazena na pilha
         lessExp.exp1.accept(self)
         code.append("    addi $sp, $sp, -4")
@@ -209,7 +200,6 @@ class AssemblyVisitor(AbstractVisitor):
         code.append("    addi $sp, $sp, -4")  # Aloca espaço na pilha
         st.addSP(-4)
         code.append("    sw $v0, 0($sp)")  # Empilha o resultado
-
         somaExp.exp2.accept(self)  # Avalia a segunda expressão
         code.append("    lw $t0, 0($sp)")  # Recupera o valor salvo
         code.append("    add $sp, $sp, 4")  # Libera espaço da pilha
@@ -222,7 +212,6 @@ class AssemblyVisitor(AbstractVisitor):
         code.append("    addi $sp, $sp, -4")
         st.addSP(-4)
         code.append("    sw $v0, 0($sp)")
-
         mulExp.exp2.accept(self)  # Avalia a segunda expressão
         code.append("    lw $t0, 0($sp)")
         code.append("    add $sp, $sp, 4")
@@ -258,7 +247,6 @@ class AssemblyVisitor(AbstractVisitor):
         code.append("    mul $v0, $v0, $t0")  # Multiplica resultado pela base
         code.append("    sub $t1, $t1, 1")  # Decrementa expoente
         code.append(f"    j {rotulo_laco}")  # Volta para o início do loop
-
         code.append(f"{rotulo_final}:")  # Fim da exponenciação
         
     def visitNumExp(self, numExp):
@@ -273,13 +261,11 @@ class AssemblyVisitor(AbstractVisitor):
                 code.append(f"    lw $v0, {idExp.id}($zero)")
             else:
                 code.append(f"    lw $v0, {idName[st.OFFSET]}($fp)")
-
     
     def visitBooleanExp(self, booleanExp):
         code = self.getList() 
         value = 1 if booleanExp.boolValue == "true" else 0
         code.append(f"    li $v0, {value}")
-
 
     #gera código assembly
     def get_code(self):
@@ -293,12 +279,6 @@ class AssemblyVisitor(AbstractVisitor):
         finalcode = finalcode + self.funcs
         finalcode.append("\nend:\n    li $v0, 10\n    syscall")
         return "\n".join(finalcode)
-    
-
-
- 
-
-
 
 def main():
     f = open("input3.su", "r")
@@ -307,9 +287,9 @@ def main():
     parser = yacc.yacc()
     result = parser.parse(debug=False)
     print("#Gera Assembly")
-    svisitor = AssemblyVisitor()
-    result.accept(svisitor)
-    print(svisitor.get_code())
+    assemblyvisitor = AssemblyVisitor()
+    result.accept(assemblyvisitor)
+    print(assemblyvisitor.get_code())
 
 if __name__ == "__main__":
     main()
