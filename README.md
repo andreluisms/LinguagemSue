@@ -33,10 +33,13 @@ Nesse documento, são apresentadas as atividades a serem desenvolvidas pelos dis
 
 - [x] Atividade 7. Geração de Assembly.
   
-  - Exemplo de Gerador de Assembly MIPS
+  - [Exemplo de Gerador de Assembly MIPS](https://github.com/andreluisms/LinguagemSue/blob/main/AssemblyVisitor.py)
 
 
 # Links para os Projetos dos Discentes 
+## 2024.2 
+
+
 
 ## 2022.2 
 
