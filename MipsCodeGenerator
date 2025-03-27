@@ -1,0 +1,158 @@
+from AbstractVisitor import AbstractVisitor
+from ExpressionLanguageParser import *
+
+class MIPSCodeGenerator(AbstractVisitor):
+    def __init__(self):
+        self.code = []  # Código Gerado
+        self.rotulos_cont = 0  # Contador para rotulos
+    
+    def novo_rotulo(self):
+        rotulo = f"L{self.rotulos_cont}"
+        self.rotulos_cont += 1
+        return rotulo
+    
+    def visitFuncDeclConcrete(self, funcDeclConcrete):
+        funcDeclConcrete.signature.accept(self)
+        funcDeclConcrete.body.accept(self)
+    
+    def visitSignatureConcrete(self, signatureConcrete):
+        self.code.append(f"{signatureConcrete.id}:")
+        self.code.append("    move $fp, $sp")  # Configurar o frame pointer
+        #Ajustar sp de acordo com a quantidade de parametros
+        #Cada parametro ocupa posicao x em funcao do fp
+        #Tabela de simbolo armazena essa posicao x do fp
+        #Adicionar na tabela de simbolos uma variavel 
+        self.code.append("    subu $sp, $sp, 8")  # Criar espaço na pilha para variáveis locais
+    
+    def visitBodyConcrete(self, bodyConcrete):
+        if bodyConcrete.stms:
+            bodyConcrete.stms.accept(self)
+    
+    def visitStmReturn(self, stmReturn):
+        stmReturn.exp.accept(self)
+        self.code.append("    move $sp, $fp")  # Restaurar stack pointer
+        #Otimizacao - Talvez desnecessario essas 3 instruções
+        # self.code.append("    lw $ra, 4($sp)")  # Restaurar endereço de retorno
+        # self.code.append("    lw $fp, 0($sp)")  # Restaurar frame pointer
+        # self.code.append("    addiu $sp, $sp, 8")  # Liberar espaço na pilha
+        #Otimizacao - Talvez desnecessario
+ 
+        self.code.append("    jr $ra")  # Retornar para a função chamadora
+    
+    def visitSomaExp(self, somaExp):
+        somaExp.exp1.accept(self)
+        self.code.append("    move $t0, $v0")  # Salvar resultado temporário
+        somaExp.exp2.accept(self)
+        self.code.append("    add $v0, $t0, $v0")
+    
+    def visitMulExp(self, mulExp):
+        mulExp.exp1.accept(self)
+        self.code.append("    move $t0, $v0")
+        mulExp.exp2.accept(self)
+        self.code.append("    mul $v0, $t0, $v0")
+    
+    def visitAssignExp(self, assignExp):
+        assignExp.exp2.accept(self)
+        self.code.append(f"    sw $v0, {assignExp.exp1.id}($fp)")  # Atribuir variável na pilha
+    
+    def visitNumExp(self, numExp):
+        self.code.append(f"    li $v0, {numExp.num}")
+    
+    def visitIdExp(self, idExp):
+        self.code.append(f"    lw $v0, {idExp.id}($fp)")  # Acessar variável na pilha
+    
+    def visitBooleanExp(self, booleanExp):
+        value = 1 if booleanExp.boolValue == "true" else 0
+        self.code.append(f"    li $v0, {value}")
+    
+    def visitStmWhile(self, stmWhile):
+        rotulo_inicial = self.novo_rotulo()
+        rotulo_final = self.novo_rotulo()
+        
+        self.code.append(f"{rotulo_inicial}:")
+        stmWhile.exp.accept(self)
+        self.code.append(f"    beq $v0, $zero, {rotulo_final}")  # Se condição falsa, sai do loop
+        stmWhile.block.accept(self)
+        self.code.append(f"    j {rotulo_inicial}")  # Volta para o início do loop
+        self.code.append(f"{rotulo_final}:")
+    
+    def visitCallExp(self, callExp):
+        self.code.append("    sw $ra, 0($sp)")  # Salvar endereço de retorno
+        self.code.append("    sw $fp, 4($sp)")  # Salvar frame pointer
+        self.code.append("    addiu $sp, $sp, -8")  # Ajustar pilha
+        callExp.call.accept(self)
+        self.code.append("    lw $fp, 4($sp)")  # Restaurar frame pointer
+        self.code.append("    lw $ra, 0($sp)")  # Restaurar endereço de retorno
+        self.code.append("    addiu $sp, $sp, 8")  # Ajustar pilha de volta
+    
+
+    
+    def visitSingleParam(self, singleParam):
+        singleParam.exp.accept(self)
+        self.code.append("    move $a0, $v0")  # Passar argumento
+    
+    def visitCompoundParams(self, compoundParams):
+        compoundParams.exp.accept(self)
+        self.code.append("    move $a0, $v0")  # Passar argumento
+        compoundParams.params.accept(self)
+    
+    def visitSingleStm(self, singleStm):
+        singleStm.stm.accept(self)
+    
+    def visitCompoundStm(self, compoundStm):
+        compoundStm.stm.accept(self)
+        compoundStm.stms.accept(self)
+    
+    def get_code(self):
+        return "\n".join(self.code)
+    
+    def visitCompoundSigParams(self, compoundSigParams):
+        self.code.append(f"    # Param: {compoundSigParams.id} ({compoundSigParams.type})")
+        compoundSigParams.sigParams.accept(self)
+    
+
+    def visitParamsCall(self, paramsCall):
+        paramsCall.params.accept(self)
+        self.code.append(f"    jal {paramsCall.id}")  # Chamar função
+
+    def visitNoParamsCall(self, simpleCall):
+        self.code.append(f"    jal {simpleCall.id}")  # Chamada de função sem parâmetros
+    
+    def visitPotExp(self, potExp):
+        potExp.exp1.accept(self)
+        self.code.append("    move $t0, $v0")  # Salvar base
+        potExp.exp2.accept(self)
+        self.code.append("    move $t1, $v0")  # Salvar expoente
+        self.code.append("    li $v0, 1")  # Inicializar resultado
+        rotulo_laco = self.novo_rotulo()
+        rotulo_final = self.novo_rotulo()
+        self.code.append(f"{rotulo_laco}:")
+        self.code.append("    beq $t1, $zero, " + rotulo_final)
+        self.code.append("    mul $v0, $v0, $t0")
+        self.code.append("    sub $t1, $t1, 1")
+        self.code.append("    j " + rotulo_laco)
+        self.code.append(f"{rotulo_final}:")
+
+    def visitStmExp(self, stmExp):
+        stmExp.exp.accept(self)   
+
+    def visitSingleSigParams(self, singleSigParams):
+        self.code.append(f"    # Param: {singleSigParams.id} ({singleSigParams.type})")
+
+def main():
+    f = open("input1.su", "r")
+    lexer = lex.lex()
+    lexer.input(f.read())
+    parser = yacc.yacc()
+    result = parser.parse(debug=False)
+    print("Gera Assembly")
+    svisitor = MIPSCodeGenerator()
+    for r in result:
+        r.accept(svisitor)
+        print(svisitor.get_code())
+
+    
+
+
+if __name__ == "__main__":
+    main()

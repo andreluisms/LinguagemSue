@@ -3,6 +3,30 @@ from abc import abstractmethod, ABCMeta
 class AbstractVisitor(metaclass=ABCMeta):
 
     @abstractmethod
+    def visitSingleFunProgram(self, singleFunProgram): pass
+
+    @abstractmethod
+    def visitSingleVarProgram(self, singleVarProgram): pass
+
+    @abstractmethod
+    def visitSingleCallProgram(self, singleVarProgram): pass
+
+    @abstractmethod
+    def visitCompoundFunProgram(self, compoundFunProgram): pass
+
+    @abstractmethod
+    def visitCompoundVarProgram(self, compoundVarProgram): pass
+
+    @abstractmethod
+    def visitCompoundCallProgram(self, compoundVarProgram): pass
+
+    @abstractmethod
+    def visitGVDConcrete(self, gvdConcrete): pass
+
+    @abstractmethod
+    def visitCGCConcrete(self, cgcConcrete): pass
+
+    @abstractmethod
     def visitFuncDeclConcrete(self, funcDecl): pass
 
     @abstractmethod
@@ -37,6 +61,9 @@ class AbstractVisitor(metaclass=ABCMeta):
 
     @abstractmethod
     def visitSomaExp(self, somaExp): pass
+
+    @abstractmethod
+    def visitLessExp(self, somaExp): pass
 
     @abstractmethod
     def visitMulExp(self, mulExp): pass

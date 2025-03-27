@@ -1,0 +1,4 @@
+int sumparabola(int a, int b, int c, int d){
+    return a + b ^ c * d; 
+}
+e = sumparabola(2, 3, 4, 4) + sumparabola(2, 3, 4, 4) + sumparabola(2, 3, 4, 4) + sumparabola(2, 3, 4, 4);

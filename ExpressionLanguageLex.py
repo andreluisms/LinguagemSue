@@ -9,7 +9,7 @@ reservadas = {
    'return' : 'RETURN'
 }
 tokens = ['COMMA', 'SOMA', 'ID', 'NUMBER', 'VEZES', 'POT', 'LPAREN',
-          'RPAREN', 'IGUAL', 'LCHAV', 'RCHAV', 'PV'] + list(reservadas.values())
+          'RPAREN', 'IGUAL', 'LCHAV', 'RCHAV', 'PV', 'LESS'] + list(reservadas.values())
 
 t_IGUAL= r'='
 t_SOMA = r'\+'
@@ -20,6 +20,7 @@ t_RPAREN = r'\)'
 t_COMMA = r','
 t_LCHAV = r'{'
 t_RCHAV = r'}'
+t_LESS = r'<'
 t_PV = r';'
 
 def t_ID(t):

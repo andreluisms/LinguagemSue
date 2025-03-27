@@ -11,6 +11,41 @@ def blank():
 
 class Visitor(AbstractVisitor):
 
+    def visitSingleFunProgram(self, singleFunProgram): 
+        singleFunProgram.funcDecl.accept(self)
+
+
+    def visitSingleVarProgram(self, singleVarProgram): 
+        singleVarProgram.globalVarDecl.accept(self)
+        print("; ")
+
+    def visitSingleCallProgram(self, singleCallProgram): 
+        singleCallProgram.callglobal.accept(self)
+        print("; ")
+
+
+    def visitCompoundFunProgram(self, compoundFunProgram): 
+        compoundFunProgram.funcDecl.accept(self)
+        compoundFunProgram.program.accept(self)
+
+    def visitCompoundVarProgram(self, compoundVarProgram): 
+        compoundVarProgram.globalVarDecl.accept(self)
+        print("; ")
+        compoundVarProgram.program.accept(self)
+
+    def visitCompoundCallProgram(self, compoundCallProgram): 
+        compoundCallProgram.callglobal.accept(self)
+        print("; ")
+        compoundCallProgram.program.accept(self)
+
+    def visitGVDConcrete(self, gvdConcrete):
+        print(gvdConcrete.id, end='')
+        print(' = ', end='')
+        gvdConcrete.exp.accept(self)
+
+    def visitCGCConcrete(self, cgcConcrete):
+        cgcConcrete.call.accept(self)
+
     def visitFuncDeclConcrete(self, funcDeclConcrete):
         funcDeclConcrete.signature.accept(self)
         funcDeclConcrete.body.accept(self)
@@ -50,7 +85,8 @@ class Visitor(AbstractVisitor):
     def visitStmExp(self, stmExp):
         print(blank(),sep='',end='')
         stmExp.exp.accept(self)
-        print('')
+        print(";")
+
 
     def visitStmWhile(self, stmWhile):
         print (blank(), 'while (', end='', sep='')
@@ -61,13 +97,20 @@ class Visitor(AbstractVisitor):
     def visitStmReturn(self, stmReturn):
         print (blank(), 'return ', end='', sep='')
         stmReturn.exp.accept(self)
-        print (';')
+        print(";")
 
     def visitAssignExp(self, assignExp):
         # print("visitAssignExp")
         assignExp.exp1.accept(self)
         print(' = ', end='')
         assignExp.exp2.accept(self)
+
+
+    def visitLessExp(self, lessExp):
+        # print("visitSomaExp")
+        lessExp.exp1.accept(self)
+        print(' < ', end='')
+        lessExp.exp2.accept(self)
 
     def visitSomaExp(self, somaExp):
         # print("visitSomaExp")
@@ -124,15 +167,14 @@ class Visitor(AbstractVisitor):
 
 
 def main():
-    f = open("input1.su", "r")
+    f = open("input3.su", "r")
     lexer = lex.lex()
     lexer.input(f.read())
     parser = yacc.yacc()
     result = parser.parse(debug=False)
     print("#imprime o programa que foi passado como entrada")
     visitor = Visitor()
-    for r in result:
-        r.accept(visitor)
+    result.accept(visitor)
 
 if __name__ == "__main__":
     main()

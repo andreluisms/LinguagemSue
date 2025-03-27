@@ -2,9 +2,83 @@ from abc import abstractmethod
 from abc import ABCMeta
 
 '''
+Definicao de programa
+Program
+'''
+class Program(metaclass=ABCMeta):
+    @abstractmethod
+    def accept(self, visitor):
+        pass
+
+class CompoundFunProgram(Program):
+    def __init__(self, funcDecl, program):
+        self.funcDecl = funcDecl
+        self.program = program
+    def accept(self, visitor):
+        return visitor.visitCompoundFunProgram(self)
+    
+class CompoundVarProgram(Program):
+    def __init__(self, globalVarDecl, program):
+        self.globalVarDecl = globalVarDecl
+        self.program = program
+    def accept(self, visitor):
+        return visitor.visitCompoundVarProgram(self)
+    
+class CompoundCallProgram(Program):
+    def __init__(self, callglobal, program):
+        self.callglobal = callglobal
+        self.program = program
+    def accept(self, visitor):
+        return visitor.visitCompoundCallProgram(self)
+    
+class SingleFunProgram(Program):
+    def __init__(self, funcDecl):
+        self.funcDecl = funcDecl
+    def accept(self, visitor):
+        return visitor.visitSingleFunProgram(self)
+
+class SingleVarProgram(Program):
+    def __init__(self, globalVarDecl):
+        self.globalVarDecl = globalVarDecl
+    def accept(self, visitor):
+        return visitor.visitSingleVarProgram(self)
+    
+class SingleCallProgram(Program):
+    def __init__(self, callglobal):
+        self.callglobal = callglobal
+    def accept(self, visitor):
+        return visitor.visitSingleCallProgram(self)
+
+class GlobalVarDecl(metaclass=ABCMeta):
+    @abstractmethod
+    def accept(self, visitor):
+        pass
+
+class GVDConcrete(GlobalVarDecl):
+    def __init__(self, id, exp):
+        self.id = id
+        self.exp = exp
+    def accept(self, visitor):
+        return visitor.visitGVDConcrete(self)
+    
+class CallGlobal(metaclass=ABCMeta):
+    @abstractmethod
+    def accept(self, visitor):
+        pass
+    
+class CGCConcrete(CallGlobal):
+    def __init__(self, call):
+        self.call = call
+    def accept(self, visitor):
+        return visitor.visitCGCConcrete(self)
+
+'''
 Declaracao de funcao
 FuncDecl
 '''
+
+
+
 class FuncDecl(metaclass=ABCMeta):
     @abstractmethod
     def accept(self, visitor):
@@ -145,6 +219,14 @@ class AssignExp(Exp):
         self.exp2 = exp2
     def accept(self, visitor):
         return visitor.visitAssignExp(self)
+
+class LessExp(Exp):
+    def __init__(self, exp1, exp2):
+        self.exp1 = exp1
+        self.exp2 = exp2
+    def accept(self, visitor):
+        return visitor.visitLessExp(self)
+
 
 class SomaExp(Exp):
     def __init__(self, exp1, exp2):
