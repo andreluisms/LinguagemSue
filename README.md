@@ -39,7 +39,30 @@ Nesse documento, são apresentadas as atividades a serem desenvolvidas pelos dis
 # Links para os Projetos dos Discentes 
 ## 2024.2 
 
+#### [Grupo 01 - Kotlin:](https://github.com/Luan-S4ntana/Compilador_Ruby)
+  - Arthur Conceição de Assis
+  - Cassiano Menezes Silva Santos
+  - Diego Dias Inocêncio
+  - Eduardo Vieira dos Santos
+  - Luigi Vinícius Oliveira Barros
+    
+#### [Grupo 02 - Lua:](https://github.com/Luan-S4ntana/Compilador_Ruby)
+   - Jadson Tavares Santos
+   - Jhonatas Nascimento Oliveira
+   - Jose Geilson dos Santos
 
+#### [Grupo 03 - Rust:](https://github.com/Luan-S4ntana/Compilador_Ruby)
+  - Cleomadson Dias Santos Medeiros
+  - Fernanda Mirely Barbosa Souza
+  - Kéwen dos Santos Silva
+  - Rafael Santos Lima
+  - Renne Bispo Dos Santos
+
+#### [Grupo 04 - Go:](https://github.com/Luan-S4ntana/Compilador_Ruby)
+  - Amanda De Jesus Melo
+  - Ana Maria De Carvalho Mendonca
+  - João Pedro Santos
+  - Talysson Felipe Vasconcelos Santos
 
 ## 2022.2 
 
